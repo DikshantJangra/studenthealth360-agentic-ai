@@ -1,0 +1,47 @@
+NIH — Stress Management and Mental Health Guidelines
+Source: National Institutes of Health (NIH) / National Institute of Mental Health (NIMH)
+
+OVERVIEW
+Stress is the body's natural response to demands or threats. While short-term stress can enhance performance, chronic or excessive stress adversely affects physical and mental health. College students are particularly vulnerable due to academic pressure, social transitions, financial concerns, and lifestyle changes.
+
+UNDERSTANDING STRESS LEVELS
+Stress can be measured through both subjective self-report and objective biosensor data:
+- Self-reported stress reflects the individual's perception of their stress burden.
+- Biosensor stress (measured via wearable devices) captures physiological indicators such as galvanic skin response, heart rate variability, and cortisol levels.
+- A significant discrepancy between self-reported and biosensor stress may indicate poor interoceptive awareness or denial of stress symptoms.
+- Stress levels above 7/10 on standardised scales are considered clinically significant and warrant intervention.
+
+PHYSIOLOGICAL EFFECTS OF CHRONIC STRESS
+Prolonged stress activates the hypothalamic-pituitary-adrenal (HPA) axis, leading to:
+- Elevated cortisol levels — disrupts metabolism, immune function, and sleep architecture.
+- Cardiovascular strain — increased resting heart rate, elevated blood pressure, and accelerated atherosclerosis.
+- Impaired cognitive function — reduced working memory, concentration, and decision-making ability.
+- Digestive disturbances — altered gut motility, appetite changes, and gastrointestinal discomfort.
+- Immune suppression — increased susceptibility to infections and delayed wound healing.
+
+EVIDENCE-BASED STRESS MANAGEMENT STRATEGIES
+The NIH recommends the following approaches:
+1. Mindfulness and meditation — daily practice of 10–20 minutes reduces cortisol and anxiety. Techniques include body scanning, focused breathing, and guided imagery.
+2. Physical exercise — regular aerobic exercise (30 minutes, 5 days/week) releases endorphins and reduces stress hormones.
+3. Social support — maintaining strong social connections buffers against stress. Peer support groups and counselling services are particularly effective for students.
+4. Time management — structured scheduling, prioritisation, and realistic goal-setting reduce academic stress.
+5. Sleep optimisation — consistent sleep schedule and sleep hygiene practices (see CDC Sleep Guidelines).
+6. Cognitive behavioural techniques — identifying and reframing negative thought patterns reduces perceived stress.
+7. Progressive muscle relaxation — systematically tensing and relaxing muscle groups reduces physical tension.
+8. Limiting stimulants — reducing caffeine, sugar, and screen time can lower baseline anxiety.
+
+WHEN TO SEEK PROFESSIONAL HELP
+Students should pursue professional mental health support if:
+- Stress interferes with daily functioning for more than 2 consecutive weeks.
+- They experience persistent feelings of hopelessness, worthlessness, or emptiness.
+- They have difficulty sleeping or experience nightmares related to stressors.
+- They notice withdrawal from social activities or academic responsibilities.
+- They engage in harmful coping mechanisms (substance abuse, self-harm, disordered eating).
+- They experience panic attacks or overwhelming anxiety that disrupts daily life.
+
+CAMPUS RESOURCES
+Universities typically provide:
+- Counselling centres with licensed therapists offering individual and group therapy.
+- Crisis hotlines and after-hours mental health support.
+- Peer mentorship and wellness programmes.
+- Academic accommodations for students experiencing mental health challenges.
