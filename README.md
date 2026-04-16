@@ -3,18 +3,35 @@
 
 ---
 
+## Problem Statement
+
+Traditional predictive healthcare systems, such as the framework developed in Milestone 1, are often limited to generating numerical risk scores without providing actionable insights or continuous support. While identifying at-risk individuals is a critical first step, the absence of intelligent interpretation and personalized guidance reduces the practical utility of such systems in a real-world setting.
+
+In a university environment, student health is influenced by a complex combination of physiological, behavioral, and psychological factors. Simply predicting risk levels (Low, Moderate, High) is insufficient; students and administrators require meaningful recommendations, preventive strategies, and clear explanations grounded in reliable medical knowledge.
+
+To bridge this gap, the system must evolve into an agentic AI health support assistant capable of:
+- Autonomously analyzing predicted health risks and identifying key factors.
+- Retrieving relevant medical guidelines from trusted knowledge sources.
+- Generating structured, personalized health summaries and intervention plans.
+- Ensuring responsible AI behavior through source attribution and medical disclaimers.
+- Handling incomplete data or system failures gracefully.
+
+This milestone focuses on transforming a static ML-based prediction system into a dynamic, reasoning-driven AI assistant using LangGraph for workflows and Retrieval-Augmented Generation (RAG) for localized knowledge retrieval.
+
+---
+
 ## Objective
 Extend the risk assessment system into an **agentic AI health support assistant** that autonomously reasons over patient data, retrieves medical knowledge, and generates structured health guidance.
 
 ---
 
-## 🛠 Functional Requirements
-- **Autonomous Analysis:** Autonomously analyze risk predictions and patient profiles.
-- **Knowledge Retrieval:** Retrieve medical guidelines and contextually relevant content via RAG.
-- **Structured Reporting:** Generate comprehensive and structured health summaries.
-- **Graceful Handling:** Handle incomplete data or tool failures with robust fallback mechanisms.
+## Functional Requirements
+- Autonomously analyze risk predictions.
+- Retrieve medical guidelines/content.
+- Generate structured health summaries.
+- Handle incomplete data tool failures gracefully.
 
-## 🧠 Technical Requirements (Agentic)
+## Technical Requirements (Agentic)
 - **Framework:** LangGraph (for complex workflow and shared state management).
 - **RAG System:** Vector DB (Chroma/FAISS) for indexing and retrieving medical guidelines.
 - **State Management:** Explicit state management across multiple reasoning steps.
@@ -22,22 +39,20 @@ Extend the risk assessment system into an **agentic AI health support assistant*
 
 ---
 
-## 📋 Structured Output
-The agent generates a report containing:
-- **Risk Summary:** Detailed patient risk profile and identified key factors.
-- **Recommendations:** Actionable preventive care and follow-up suggestions.
-- **Sources:** Proper attribution to medical guidelines and retrieved chunks.
-- **Disclaimer:** Mandatory medical advice disclaimer (Non-diagnostic).
+## Structured Output
+- Risk Summary: Patient risk profile & Key factors.
+- Recommendations: Preventive care & Follow-up.
+- Sources: Attribution to medical guidelines.
+- Disclaimer: Mandatory medical advice disclaimer.
 
 ---
 
 ---
 
-## Live Demo
-
-🔗 **Deployed App:** [Link to Hugging Face Spaces / Streamlit Cloud]
-📁 **GitHub Repo:** [github.com/DikshantJangra/StudentHealthAssessment360](https://github.com/DikshantJangra/StudentHealthAssessment360)
-🎥 **Demo Video:** [Google Drive](https://drive.google.com/drive/folders/1I9yAZUiRHLviQuqN2Y2R37N94Y-8p8Ao?usp=sharing)
+## Final Artifacts
+- **Hosted Link:** [Link to Hugging Face Spaces / Streamlit Cloud]
+- **GitHub Repo:** [github.com/DikshantJangra/StudentHealthAssessment360](https://github.com/DikshantJangra/StudentHealthAssessment360)
+- **Demo Video:** [Google Drive](https://drive.google.com/drive/folders/1I9yAZUiRHLviQuqN2Y2R37N94Y-8p8Ao?usp=sharing)
 
 ---
 
@@ -257,24 +272,25 @@ SOURCES
 
 ---
 
-## 🏆 Evaluation Criteria
+## Evaluation Criteria
 
 | Phase | Weight | Criteria |
 |---|---|---|
-| **Mid-Sem (Milestone 1)** | 25% | Correct application of ML concepts, Quality of data preprocessing/Feature selection, Model performance, Code modularity & UI usability. |
-| **End-Sem (Milestone 2)** | 30% | Quality/reliability of agent reasoning, Correct RAG implementation & State management, Clarity/Structure of health reports, Ethical AI & Deployment success. |
+| Mid-Sem (Milestone 1) | 25% | Correct application of ML concepts, Quality of data preprocessing & Feature selection, Model performance & Evaluation metrics, Code modularity & UI usability. |
+| End-Sem (Milestone 2) | 30% | Quality & reliability of agent reasoning, Correct RAG implementation & State management, Clarity/Structure of health reports, Ethical responsible AI & Deployment success. |
 
 ---
 
-## 📦 End-Sem Deliverables
-- **Hosted Link:** Fully deployed public application.
-- **GitHub Repository:** Complete, well-documented codebase.
-- **Demo Video:** Thorough system walkthrough and demo.
-- **Design Docs:** Agent workflow and architecture design documents.
+## End-Sem Deliverables
+- Fully deployed public application.
+- Agent workflow design docs.
+- Structured health report generation.
+- GitHub Repository & Complete Codebase.
+- Demo Video (System walkthrough).
 
 ---
 
-## 👥 Team
+## Team
 
 | Name | Enrollment Number | Email ID | Role |
 |---|---|---|---|
