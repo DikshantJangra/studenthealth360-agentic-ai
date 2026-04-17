@@ -10,10 +10,15 @@ from typing import Tuple, List
 from config import MODEL_PATH, MODEL_FEATURE_ORDER, RISK_LABELS, FEATURE_DISPLAY_NAMES
 from ml.preprocessing import preprocess_input
 
+# ── Singleton Model Loader ──────────────────────────────────────────
+_model = None
 
-def _load_model():
-    """Load the trained logistic-regression model from Milestone 1."""
-    return joblib.load(MODEL_PATH)
+def _get_model():
+    """Load the trained model once and reuse it."""
+    global _model
+    if _model is None:
+        _model = joblib.load(MODEL_PATH)
+    return _model
 
 
 def predict(patient_data: dict) -> Tuple[float, int, str, List[str]]:
@@ -36,7 +41,7 @@ def predict(patient_data: dict) -> Tuple[float, int, str, List[str]]:
     top_features : list[str]
         Top 3 features most responsible for this prediction.
     """
-    model = _load_model()
+    model = _get_model()
     df = preprocess_input(patient_data)
 
     # --- Prediction ----------------------------------------------------------
@@ -54,9 +59,6 @@ def predict(patient_data: dict) -> Tuple[float, int, str, List[str]]:
 def _extract_top_features(model, df, risk_class: int, k: int = 3) -> List[str]:
     """
     Extract top-k features driving the prediction using model coefficients.
-
-    For logistic regression, uses the coefficient magnitude for the predicted
-    class.  Falls back to absolute feature values for non-linear models.
     """
     try:
         # Logistic regression: coef_ shape is (n_classes, n_features)

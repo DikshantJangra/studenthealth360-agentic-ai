@@ -1,6 +1,5 @@
 """
 Preprocessing utilities for patient input data.
-Transforms raw patient dict → model-ready DataFrame matching M1 training schema.
 """
 
 import pandas as pd
@@ -13,32 +12,26 @@ from config import (
     SLEEP_MAP,
 )
 
+# ── Singleton Scaler Loader ─────────────────────────────────────────
+_scaler = None
 
-def _load_scaler():
-    """Load the fitted StandardScaler from Milestone 1."""
-    return joblib.load(SCALER_PATH)
+def _get_scaler():
+    """Load the fitted StandardScaler once and reuse it."""
+    global _scaler
+    if _scaler is None:
+        _scaler = joblib.load(SCALER_PATH)
+    return _scaler
 
 
 def preprocess_input(patient_data: dict) -> pd.DataFrame:
     """
     Convert raw patient input dict into a model-ready DataFrame.
-
-    Parameters
-    ----------
-    patient_data : dict
-        Keys: Age, Heart_Rate, Blood_Pressure_Systolic, Blood_Pressure_Diastolic,
-              Stress_Level_Biosensor, Stress_Level_Self_Report, Physical_Activity,
-              Sleep_Quality, Mood, Gender, Study_Hours, Project_Hours
-
-    Returns
-    -------
-    pd.DataFrame  — single-row, 15-column DataFrame aligned to MODEL_FEATURE_ORDER
     """
-    # --- Ordinal encoding ---------------------------------------------------
+    # --- Ordinal encoding ---
     activity_encoded = ACTIVITY_MAP.get(patient_data["Physical_Activity"], 1)
     sleep_encoded = SLEEP_MAP.get(patient_data["Sleep_Quality"], 1)
 
-    # --- One-hot encoding ----------------------------------------------------
+    # --- One-hot encoding ---
     gender = patient_data.get("Gender", "M")
     mood = patient_data.get("Mood", "Neutral")
 
@@ -62,9 +55,9 @@ def preprocess_input(patient_data: dict) -> pd.DataFrame:
 
     df = pd.DataFrame([row])
 
-    # --- Standard scaling on numerical features ------------------------------
-    scaler = _load_scaler()
+    # --- Standard scaling ---
+    scaler = _get_scaler()
     df[NUMERICAL_FEATURES] = scaler.transform(df[NUMERICAL_FEATURES])
 
-    # --- Ensure column order matches training --------------------------------
+    # --- Ensure column order ---
     return df[MODEL_FEATURE_ORDER]
